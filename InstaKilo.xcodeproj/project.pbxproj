@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		974FB27620221CF300396431 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB27520221CF300396431 /* AppDelegate.m */; };
+		974FB27C20221CF300396431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FB27A20221CF300396431 /* Main.storyboard */; };
+		974FB27E20221CF300396431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974FB27D20221CF300396431 /* Assets.xcassets */; };
+		974FB28120221CF300396431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974FB27F20221CF300396431 /* LaunchScreen.storyboard */; };
+		974FB28420221CF300396431 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB28320221CF300396431 /* main.m */; };
+		974FB28E20221CF300396431 /* InstaKiloTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB28D20221CF300396431 /* InstaKiloTests.m */; };
+		974FB29920221CF300396431 /* InstaKiloUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB29820221CF300396431 /* InstaKiloUITests.m */; };
+		974FB2A820221FF100396431 /* PhotosCollectionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB2A720221FF100396431 /* PhotosCollectionVC.m */; };
+		974FB2AB2022205900396431 /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB2AA2022205900396431 /* PhotosCollectionViewCell.m */; };
+		974FB2B120223E7500396431 /* PhotosData.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB2B020223E7500396431 /* PhotosData.m */; };
+		974FB2B420225AFD00396431 /* HeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 974FB2B320225AFD00396431 /* HeaderCollectionReusableView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		974FB28A20221CF300396431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 974FB26920221CF300396431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 974FB27020221CF300396431;
+			remoteInfo = InstaKilo;
+		};
+		974FB29520221CF300396431 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 974FB26920221CF300396431 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 974FB27020221CF300396431;
+			remoteInfo = InstaKilo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		974FB27120221CF300396431 /* InstaKilo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKilo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		974FB27420221CF300396431 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		974FB27520221CF300396431 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		974FB27B20221CF300396431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		974FB27D20221CF300396431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		974FB28020221CF300396431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		974FB28220221CF300396431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974FB28320221CF300396431 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		974FB28920221CF300396431 /* InstaKiloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		974FB28D20221CF300396431 /* InstaKiloTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloTests.m; sourceTree = "<group>"; };
+		974FB28F20221CF300396431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974FB29420221CF300396431 /* InstaKiloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKiloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		974FB29820221CF300396431 /* InstaKiloUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKiloUITests.m; sourceTree = "<group>"; };
+		974FB29A20221CF300396431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974FB2A620221FF100396431 /* PhotosCollectionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionVC.h; sourceTree = "<group>"; };
+		974FB2A720221FF100396431 /* PhotosCollectionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionVC.m; sourceTree = "<group>"; };
+		974FB2A92022205900396431 /* PhotosCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		974FB2AA2022205900396431 /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		974FB2AF20223E7500396431 /* PhotosData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosData.h; sourceTree = "<group>"; };
+		974FB2B020223E7500396431 /* PhotosData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosData.m; sourceTree = "<group>"; };
+		974FB2B220225AFD00396431 /* HeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		974FB2B320225AFD00396431 /* HeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderCollectionReusableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		974FB26E20221CF300396431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB28620221CF300396431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB29120221CF300396431 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		974FB26820221CF300396431 = {
+			isa = PBXGroup;
+			children = (
+				974FB27320221CF300396431 /* InstaKilo */,
+				974FB28C20221CF300396431 /* InstaKiloTests */,
+				974FB29720221CF300396431 /* InstaKiloUITests */,
+				974FB27220221CF300396431 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		974FB27220221CF300396431 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				974FB27120221CF300396431 /* InstaKilo.app */,
+				974FB28920221CF300396431 /* InstaKiloTests.xctest */,
+				974FB29420221CF300396431 /* InstaKiloUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		974FB27320221CF300396431 /* InstaKilo */ = {
+			isa = PBXGroup;
+			children = (
+				974FB27420221CF300396431 /* AppDelegate.h */,
+				974FB27520221CF300396431 /* AppDelegate.m */,
+				974FB2B220225AFD00396431 /* HeaderCollectionReusableView.h */,
+				974FB2B320225AFD00396431 /* HeaderCollectionReusableView.m */,
+				974FB2A620221FF100396431 /* PhotosCollectionVC.h */,
+				974FB2A720221FF100396431 /* PhotosCollectionVC.m */,
+				974FB2AF20223E7500396431 /* PhotosData.h */,
+				974FB2B020223E7500396431 /* PhotosData.m */,
+				974FB2A92022205900396431 /* PhotosCollectionViewCell.h */,
+				974FB2AA2022205900396431 /* PhotosCollectionViewCell.m */,
+				974FB27A20221CF300396431 /* Main.storyboard */,
+				974FB27D20221CF300396431 /* Assets.xcassets */,
+				974FB27F20221CF300396431 /* LaunchScreen.storyboard */,
+				974FB28220221CF300396431 /* Info.plist */,
+				974FB28320221CF300396431 /* main.m */,
+			);
+			path = InstaKilo;
+			sourceTree = "<group>";
+		};
+		974FB28C20221CF300396431 /* InstaKiloTests */ = {
+			isa = PBXGroup;
+			children = (
+				974FB28D20221CF300396431 /* InstaKiloTests.m */,
+				974FB28F20221CF300396431 /* Info.plist */,
+			);
+			path = InstaKiloTests;
+			sourceTree = "<group>";
+		};
+		974FB29720221CF300396431 /* InstaKiloUITests */ = {
+			isa = PBXGroup;
+			children = (
+				974FB29820221CF300396431 /* InstaKiloUITests.m */,
+				974FB29A20221CF300396431 /* Info.plist */,
+			);
+			path = InstaKiloUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		974FB27020221CF300396431 /* InstaKilo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 974FB29D20221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKilo" */;
+			buildPhases = (
+				974FB26D20221CF300396431 /* Sources */,
+				974FB26E20221CF300396431 /* Frameworks */,
+				974FB26F20221CF300396431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InstaKilo;
+			productName = InstaKilo;
+			productReference = 974FB27120221CF300396431 /* InstaKilo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		974FB28820221CF300396431 /* InstaKiloTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 974FB2A020221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKiloTests" */;
+			buildPhases = (
+				974FB28520221CF300396431 /* Sources */,
+				974FB28620221CF300396431 /* Frameworks */,
+				974FB28720221CF300396431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				974FB28B20221CF300396431 /* PBXTargetDependency */,
+			);
+			name = InstaKiloTests;
+			productName = InstaKiloTests;
+			productReference = 974FB28920221CF300396431 /* InstaKiloTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		974FB29320221CF300396431 /* InstaKiloUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 974FB2A320221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKiloUITests" */;
+			buildPhases = (
+				974FB29020221CF300396431 /* Sources */,
+				974FB29120221CF300396431 /* Frameworks */,
+				974FB29220221CF300396431 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				974FB29620221CF300396431 /* PBXTargetDependency */,
+			);
+			name = InstaKiloUITests;
+			productName = InstaKiloUITests;
+			productReference = 974FB29420221CF300396431 /* InstaKiloUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		974FB26920221CF300396431 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aaron Chong";
+				TargetAttributes = {
+					974FB27020221CF300396431 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					974FB28820221CF300396431 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 974FB27020221CF300396431;
+					};
+					974FB29320221CF300396431 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 974FB27020221CF300396431;
+					};
+				};
+			};
+			buildConfigurationList = 974FB26C20221CF300396431 /* Build configuration list for PBXProject "InstaKilo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 974FB26820221CF300396431;
+			productRefGroup = 974FB27220221CF300396431 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				974FB27020221CF300396431 /* InstaKilo */,
+				974FB28820221CF300396431 /* InstaKiloTests */,
+				974FB29320221CF300396431 /* InstaKiloUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		974FB26F20221CF300396431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				974FB28120221CF300396431 /* LaunchScreen.storyboard in Resources */,
+				974FB27E20221CF300396431 /* Assets.xcassets in Resources */,
+				974FB27C20221CF300396431 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB28720221CF300396431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB29220221CF300396431 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		974FB26D20221CF300396431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				974FB2B420225AFD00396431 /* HeaderCollectionReusableView.m in Sources */,
+				974FB28420221CF300396431 /* main.m in Sources */,
+				974FB2AB2022205900396431 /* PhotosCollectionViewCell.m in Sources */,
+				974FB2A820221FF100396431 /* PhotosCollectionVC.m in Sources */,
+				974FB2B120223E7500396431 /* PhotosData.m in Sources */,
+				974FB27620221CF300396431 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB28520221CF300396431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				974FB28E20221CF300396431 /* InstaKiloTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		974FB29020221CF300396431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				974FB29920221CF300396431 /* InstaKiloUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		974FB28B20221CF300396431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 974FB27020221CF300396431 /* InstaKilo */;
+			targetProxy = 974FB28A20221CF300396431 /* PBXContainerItemProxy */;
+		};
+		974FB29620221CF300396431 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 974FB27020221CF300396431 /* InstaKilo */;
+			targetProxy = 974FB29520221CF300396431 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		974FB27A20221CF300396431 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				974FB27B20221CF300396431 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		974FB27F20221CF300396431 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				974FB28020221CF300396431 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		974FB29B20221CF300396431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		974FB29C20221CF300396431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		974FB29E20221CF300396431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKilo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKilo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		974FB29F20221CF300396431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKilo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKilo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		974FB2A120221CF300396431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKiloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKiloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaKilo.app/InstaKilo";
+			};
+			name = Debug;
+		};
+		974FB2A220221CF300396431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKiloTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKiloTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstaKilo.app/InstaKilo";
+			};
+			name = Release;
+		};
+		974FB2A420221CF300396431 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKiloUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKiloUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstaKilo;
+			};
+			name = Debug;
+		};
+		974FB2A520221CF300396431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = InstaKiloUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.AaronChong.InstaKiloUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstaKilo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		974FB26C20221CF300396431 /* Build configuration list for PBXProject "InstaKilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				974FB29B20221CF300396431 /* Debug */,
+				974FB29C20221CF300396431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		974FB29D20221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKilo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				974FB29E20221CF300396431 /* Debug */,
+				974FB29F20221CF300396431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		974FB2A020221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKiloTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				974FB2A120221CF300396431 /* Debug */,
+				974FB2A220221CF300396431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		974FB2A320221CF300396431 /* Build configuration list for PBXNativeTarget "InstaKiloUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				974FB2A420221CF300396431 /* Debug */,
+				974FB2A520221CF300396431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 974FB26920221CF300396431 /* Project object */;
+}

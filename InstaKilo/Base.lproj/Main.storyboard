@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wvo-fR-Mmn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photos CollectionVC-->
+        <scene sceneID="gCV-qd-vZK">
+            <objects>
+                <collectionViewController id="wvo-fR-Mmn" customClass="PhotosCollectionVC" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kcW-XG-yow">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hH4-VP-8CO">
+                            <size key="itemSize" width="125" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="40"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photosCell" id="bUt-uY-y68" customClass="PhotosCollectionViewCell">
+                                <rect key="frame" x="0.0" y="50" width="125" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ghv-bM-bFj">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="120"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Ghv-bM-bFj" firstAttribute="top" secondItem="bUt-uY-y68" secondAttribute="top" id="KvO-wR-pm8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ghv-bM-bFj" secondAttribute="trailing" id="Xot-08-yfO"/>
+                                    <constraint firstItem="Ghv-bM-bFj" firstAttribute="leading" secondItem="bUt-uY-y68" secondAttribute="leading" id="pax-mm-it8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ghv-bM-bFj" secondAttribute="bottom" id="xVX-NC-I9J"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="photoImageView" destination="Ghv-bM-bFj" id="cN6-lV-Bc9"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="r1D-wv-dDm" customClass="HeaderCollectionReusableView">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvm-2Q-iH6">
+                                    <rect key="frame" x="8" y="10" width="58.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="Nvm-2Q-iH6" firstAttribute="top" secondItem="r1D-wv-dDm" secondAttribute="top" constant="10" id="3aS-Yr-nhv"/>
+                                <constraint firstItem="Nvm-2Q-iH6" firstAttribute="leading" secondItem="r1D-wv-dDm" secondAttribute="leading" constant="8" id="UQF-fY-BCV"/>
+                                <constraint firstAttribute="trailing" secondItem="Nvm-2Q-iH6" secondAttribute="trailing" constant="308.5" id="bab-aN-oqE"/>
+                                <constraint firstAttribute="bottom" secondItem="Nvm-2Q-iH6" secondAttribute="bottom" constant="9" id="rTd-Xr-9ky"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="Nvm-2Q-iH6" id="sB2-TV-pI3"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="wvo-fR-Mmn" id="Osm-mN-pwU"/>
+                            <outlet property="delegate" destination="wvo-fR-Mmn" id="AQi-CY-Ugj"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sin-kd-Fx5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695.20000000000005" y="147.97601199400302"/>
+        </scene>
+    </scenes>
+</document>
