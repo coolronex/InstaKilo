@@ -14,7 +14,8 @@
 
 @property UIImage *picture;
 @property NSString *subject;
+@property NSString *month;
 
-- (instancetype)initWithPicture:(UIImage *)picture subject:(NSString *)subject;
+- (instancetype)initWithPicture:(UIImage *)picture subject:(NSString *)subject month:(NSString *)month;
 
 @end

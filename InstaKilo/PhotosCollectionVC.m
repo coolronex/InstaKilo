@@ -13,7 +13,11 @@
 
 @interface PhotosCollectionVC ()
 
-@property (strong, nonatomic) NSMutableArray <PhotosData *> *pictureArray;
+@property (strong, nonatomic) NSArray <PhotosData *> *picturesArray;
+@property (strong, nonatomic) NSMutableArray <NSMutableArray *> *collectionData;
+@property (strong, nonatomic) NSMutableSet *sectionSet;
+@property (assign, nonatomic) BOOL changeCategories;
+
 @property (strong, nonatomic) PhotosData *photosData;
 
 @end
@@ -25,65 +29,96 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    PhotosData *item1 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"angel-falls"] subject:@"famous places"];
-    PhotosData *item2 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"burgers"] subject:@"food"];
-    PhotosData *item3 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"golden-gate-bridge"] subject:@"famous places"];
-    PhotosData *item4 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"machu-picchu"] subject:@"famous places"];
-    PhotosData *item5 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"mt-fuji"] subject:@"famous places"];
-    PhotosData *item6 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"onion-rings"] subject:@"food"];
-    PhotosData *item7 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"pancakes"] subject:@"food"];
-    PhotosData *item8 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"pizza"] subject:@"food"];
-    PhotosData *item9 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"salmon"] subject:@"food"];
-    PhotosData *item10 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"taj-mahal"] subject:@"famous places"];
+    PhotosData *item1 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"angel-falls"] subject:@"Famous places" month:@"January"];
+    PhotosData *item2 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"burgers"] subject:@"Food" month:@"February"];
+    PhotosData *item3 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"golden-gate-bridge"] subject:@"Famous places" month:@"March"];
+    PhotosData *item4 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"machu-picchu"] subject:@"Famous places" month:@"January"];
+    PhotosData *item5 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"mt-fuji"] subject:@"Famous places" month:@"February"];
+    PhotosData *item6 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"onion-rings"] subject:@"Food" month:@"March"];
+    PhotosData *item7 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"pancakes"] subject:@"Food" month:@"January"];
+    PhotosData *item8 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"pizza"] subject:@"Food" month:@"February"];
+    PhotosData *item9 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"salmon"] subject:@"Food" month:@"March"];
+    PhotosData *item10 = [[PhotosData alloc] initWithPicture:[UIImage imageNamed:@"taj-mahal"] subject:@"Famous places" month:@"January"];
     
+    self.picturesArray = @[item1, item2, item3, item4, item5, item6, item7, item8, item9, item10];
+    self.collectionData = [[NSMutableArray alloc] init]; //array to store both sections and cell data
     
-    self.pictureArray = [[NSMutableArray alloc] initWithObjects:item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, nil];
+    self.sectionSet = [[NSMutableSet alloc] init]; // store unique sections
     
-//    @[ @[...], @[..] ]
+    self.changeCategories = YES;
+    
+    [self separateSubjects];
 }
 
+// override setter to changeCategories
 
-/*
-#pragma mark - Navigation
+- (void) separateSubjects {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    for (PhotosData *item in self.picturesArray) {
+        
+        // if category == true,         then run this....              :         ....else run this.....
+        self.changeCategories ? [self.sectionSet addObject:item.subject] : [self.sectionSet addObject:item.month];
+    }
+    
+    NSArray *items = [[NSMutableArray alloc] init];
+    for (NSString *section in self.sectionSet) {
+        if (self.changeCategories){
+          items = [self.picturesArray filteredArrayUsingPredicate: [NSPredicate predicateWithFormat:@"subject == %@", section]];
+            
+        } else{
+        items = [self.picturesArray filteredArrayUsingPredicate: [NSPredicate predicateWithFormat:@"month == %@", section]];
+        }
+        
+        [self.collectionData addObject:[items copy]];
+    }
 }
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    
-    
-    return 2;
+
+    return self.collectionData.count;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return self.pictureArray.count;
+    return self.collectionData[section].count;
 }
+
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     PhotosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"photosCell" forIndexPath:indexPath];
 
-    PhotosData *photosData = self.pictureArray[indexPath.item];
+    PhotosData *photosData = self.collectionData[indexPath.section][indexPath.item];
     cell.photosData = photosData;
     
     return cell;
 }
 
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
     
     HeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
     
-//    self.pictureArray[indexPath.section][0].subject;
+    PhotosData *data = self.collectionData[indexPath.section][indexPath.item];
+    headerView.headerLabel.text = self.changeCategories ? data.subject : data.month;
     
     return headerView;
+}
+
+- (IBAction)categoryChangeButton:(UIBarButtonItem *)sender {
+    self.changeCategories = !self.changeCategories;
+    [self separateSubjects];
+////    if (self.changeCategories == NO) {
+////        self.changeCategories = YES;
+////
+////    } else if (self.changeCategories == YES) {
+////        self.changeCategories = NO;
+////    }
+
+    [self.collectionView reloadData];
 }
 
 

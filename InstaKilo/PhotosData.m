@@ -10,13 +10,14 @@
 
 @implementation PhotosData
 
-- (instancetype)initWithPicture:(UIImage *)picture subject:(NSString *)subject{
+- (instancetype)initWithPicture:(UIImage *)picture subject:(NSString *)subject month:(NSString *)month{
     
     self = [super init];
     if (self) {
         
         _picture = picture;
         _subject = subject;
+        _month = month;
     }
     return self;
 }

@@ -15,4 +15,7 @@
 
 @property (strong, nonatomic) PhotosData *photosData;
 
+
+
+
 @end
